@@ -10,7 +10,7 @@ class Authenticator
 			puts "Please enter your username: "
 		userinfo = gets.chomp
 		if userinfo == @username
-			puts "Your username is correct"
+			puts "You've been granted access'"
 			#methodfor counting
 		end
 	end
@@ -19,7 +19,7 @@ class Authenticator
 			puts "Please enter your password: "
 		passwordinfo = gets.chomp
 		if passwordinfo == @password
-			puts "Your password is correct"
+			puts "Your access was denied, wrong password"
 			#methodfor counting
 		end
 	end
