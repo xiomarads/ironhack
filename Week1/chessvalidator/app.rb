@@ -14,12 +14,23 @@ chessboard = Board.new
 black_rook_left = Rook.new(1, 8, "black")
 white_king = King.new(5, 1, "white")
 black_queen = Queen.new(4, 5, "black")
+black_pawn = BlackPawn.new(7, 7, "black")
+black_bishop = Bishop.new(5, 4, "black")
+black_knight = Knight.new(4, 4, "black")
 
 chessboard.add_piece(black_rook_left)
 chessboard.add_piece(white_king)
 chessboard.add_piece(black_queen)
+chessboard.add_piece(black_pawn)
+chessboard.add_piece(black_bishop)
+chessboard.add_piece(black_knight)
 
+p chessboard.can_move?(1,8,1,7)
+p chessboard.can_move?(5,1,5,2)
 p chessboard.can_move?(4,5,5,6)
+p chessboard.can_move?(7,7,6,7)
+p chessboard.can_move?(5,4,6,5)
+p chessboard.can_move?(4,4,5,4)
 
 # chessboard.add_piece("Rook", 8, 8)
 # chessboard.add_piece("King", 5, 8)
