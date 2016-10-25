@@ -1,0 +1,10 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+<h1>Xiomi's Blog</h1>
+<h2>Xiomi's favorite prezza</h2>
+<p> The ingredients for this awesome prezza are: </p>
+<img src="/pizza.gif">
+<ul>
+<% @toppings.each do |my_topping| %>
+<li> <%= my_topping %> </li>
+<% end %>
+</ul>
