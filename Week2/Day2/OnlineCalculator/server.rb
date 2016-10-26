@@ -15,16 +15,16 @@ post "/calculate" do
 	@secondnum = params[:second_number].to_f
 	cal = Calculator.new(@firstnum, @secondnum)
 
-		if @operation == Add
+		if params [:operation] == add
 		@result = cal.add
 
-		elsif @operation == Subtract
+		elsif params [:operation] == subtract
 		@result = cal.subtract
 
-		elsif @operation == Multiply
+		elsif params [:operation] == multiply
 		@result = cal.multiply
 		
-		elsif @operation = Divide
+		elsif params [:divide] == divide
 		@result = cal.divide
 		end
 

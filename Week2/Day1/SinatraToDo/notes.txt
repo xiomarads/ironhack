@@ -1,0 +1,9 @@
+notes.txt
+
+Regarding web apps:
+
+- first route is always get!
+- second route, we have to decide depending on the purpose (get or post?)
+- there are always 2 routes
+- get (shows informations)
+- post (gets information input from user to perform something and return--goes to the backend where logic is and performs that.)
