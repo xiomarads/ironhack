@@ -3,6 +3,7 @@ class TodoList
     
     def initialize
         @tasks = []
+        
     end
 
     def add_task(new_task)

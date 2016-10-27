@@ -1,34 +1,40 @@
 require_relative("../lib/sinatratodo.rb")
 
-
 RSpec.describe Task do 
+
 	describe "#complete?" do
-		it "it checks if instances of tasks are completed or not." do
-			task1 = Task.new("Water garden")
-			expect(task1.complete?).to eq(false)
+		it "it returns false for new tasks" do
+			task = Task.new("Water garden")
+
+			expect(task.complete?).to eq(false)
 		end
 	end
+
 	describe "#complete!" do
-		it "changes the status of a task." do
-			task1 = Task.new("Water garden")
-			expect(task1.complete!).to eq(true)
+		it "sets @completed to true" do
+			task = Task.new("Water garden")
+			task.complete!
+			expect(task.complete!).to eq(true)
 		end
 	end
+
 	describe "#make_incomplete!" do
-		it "makes completed status false." do
-			task1 = Task.new("Water garden")
+		it "sets @completed to false." do
+			task = Task.new("Water garden")
 
 			task.complete!
 			task.make_incomplete!
 
-			expect(task1.make_incomplete?).to eq(false)
+			expect(task.complete?).to eq(false)
 		end
 	end
+
 	describe "update_content!" do
-		it "updates the task's text." do
-			task1 = Task.new("Water garder")
-			task.update.content!("Water garden")
-			expect(task1.content).to eq("Water garden")
+		it "changes the task's text." do
+			task = Task.new("Water water")
+
+			task.update_content!("Water garden")
+			expect(task.content).to eq("Water garden")
 		end
 	end
 end

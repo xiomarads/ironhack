@@ -1,0 +1,19 @@
+"More Sinatra" class notes
+
+* auto reloder (gem to not have to reload everytime there is a change)
+gem "sinatra-contrib"
+when installing a new gem, you have to run bundle install again on the terminal.
+
+
+
+* to use pry (good for debugging, it freezes your program in a certain spot and allows you to print your variables to get a picture of the code, and where you are assumptions are wront, to see what type of variable they are. Seeing what you have in every individual step.
+
+add pry to gemfile
+require it
+add binding.pry in one of the routes
+to get out of the status, type exit to return to the application
+remove that line once you're finished debugging
+
+
+
+How 

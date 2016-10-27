@@ -1,0 +1,35 @@
+MVC (Model View and Controller) = used to reinforce the separation of concerns. Makes you keep code dry, separate, and figure out what goes where.  And because it is pattern that is enforced on different apllication development environments.  in Rails for example, IOS, Android.  Helps the readability of the code. 
+
+"it's way of organizing code in the development of applications, especially ones that the user sees. Design pattern"
+
+user visits page
+user Get/todo's
+
+if route is too long, maybe it should consider delegating to the controller.
+
+* Controller ("the middle man", it interprets requests, it's also pretty dumb)
+ 
+- Controller is the orchestrator of things. Decides if the app can do the get, and who will be in charge of that
+- gets and delegates to the view and model
+
+
+
+
+* View ("beautiful idiots")
+(displays things to the user (usually involves some logic depending on user for example on Amazon, should only have the logic in charge of displays.)) (basically html(logic), css(no logic, just styling)
+
+- shouldn't have to use methods
+- sometimes uses ifs or loops...to select what it will display
+- shows instance variables from the routes
+- everything should already be pre-processed.  view is only in charge of dis-playing.
+
+
+- the viewer gets the form or the result for the get
+
+
+
+* Model (classes, objects, business logic, calculations)
+
+- related to the objects (the classes) that the app uses
+- business logic, logic in charge the problem that you're trying to solve, it should be in its own class file
+

@@ -1,0 +1,33 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="server.css">
+<title>To Do List Manager</title>
+</head>
+
+<body>
+<h1>"Welcome to your To Do List"</h1>
+<img src="clock.gif" width="200" height="100"> <br/>
+
+<% @tasks.each do |task| %>
+
+<%= task.content %>   &nbsp; <%= task.complete? %>  							
+  							
+<form action="/complete_task" Method="POST">
+<input type="hidden" name="id" value="<%=task.id%>" >
+<button>Complete</button>
+</form>
+<% end %>
+
+<!-- 
+  <input type="checkbox" name="tasks" value="task1"> Water the garden<br>
+  <input type="checkbox" name="tasks" value="task2"> Bake cookies<br>
+  <input type="checkbox" name="tasks" value="task3"> Mail cards<br> -->
+<!-- </form> -->
+
+<br/><a href="/new_task">Click to add new task</a>
+</body>
+</html>
+
+
+
+

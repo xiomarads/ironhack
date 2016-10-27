@@ -1,4 +1,4 @@
-require "sinatra"
+errequire "sinatra"
 require_relative("lib/Calculator.rb")
 
 get "/add" do
@@ -9,7 +9,7 @@ get "/home" do
 	erb(:home)
 end
 
-post "/calculate" do
+post "/calculate" do      #method and and form action on home.erb
 	@operation = params[:submit]
 	@firstnum = params[:first_number].to_f
 	@secondnum = params[:second_number].to_f

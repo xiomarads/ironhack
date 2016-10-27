@@ -1,0 +1,11 @@
+head {
+	background-color: grey;
+	color: black;
+	text-align: center
+}
+body {
+	background-color: lightyellow;
+	color: black;
+	text-align:center;
+	font-size: 20px;
+}
