@@ -5,16 +5,16 @@
 </head>
 
 <body>
-<h1>"Welcome to your To Do List"</h1>
+<h1>Welcome to your To Do List</h1>
 <img src="clock.gif" width="200" height="100"> <br/>
 
-<% @tasks.each do |task| %>
+<% @tasks.each do |task| %> <!-- need to be specific about what we display. -->
 
 <%= task.content %>   &nbsp; <%= task.complete? %>  							
   							
 <form action="/complete_task" Method="POST">
-<input type="hidden" name="id" value="<%=task.id%>" >
-<button>Complete</button>
+<input type="hidden" name="id" value="<%=task.id%>" > <!--  input type is predetermined on html and it affects how the user sees it on browser.  name is the reference for params to pull out info. Place holder = user experience.  -->
+<button>Complete this task</button>
 </form>
 <% end %>
 

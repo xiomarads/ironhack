@@ -1,0 +1,22 @@
+head {
+	background-color: black;
+	color: white;
+	text-align: center
+}
+body {
+	background-color: black;
+	color: white;
+	text-align:center;
+	font-size: 20px;
+}
+
+img {
+  height: 200px;  
+  width: 200px;
+  border: 1px solid #9799a7;
+  margin: 8px 0 0 20px;
+  padding: 4px;
+}
+
+}
+
