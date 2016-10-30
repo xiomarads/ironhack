@@ -1,0 +1,11 @@
+IMDB gem
+Reloader
+Sinatra
+
+first page: home, search form
+user makes a search
+you show 9 results from that search (with the "searched word" in the title. e.g. funny,etc)
+next pages: shows result
+when user sees results, we will ask one question: which film was filmed in "such date"?
+user selects which one (by clicking poster or a button)
+loop over the movies with posters (cut it down to 15 (9 with posters)). 

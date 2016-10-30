@@ -5,9 +5,14 @@
 </head>
 <body>
 <h1>Get your trivia on!</h1>
-<h3>Which movie was released in 2001?</h3>
-<% @movies_with_posters.each do |movie| %>
-  <img src="<%= movie.poster %>">
+<h3>Which movie was released in <%=@random_year%>?</h3>
+<% @nine_movies.each do |movie| %>
+
+<form action="/check_result" method="post" style="float:left;">
+<input type="hidden" name="random_year" value="<%= @random_year %>">
+<input type="hidden" name="correct_year" value="<%= movie.year %>">
+<button><img src="<%= movie.poster %>"></button>
+ </form>
  <%end%>
 </body>
 </html>

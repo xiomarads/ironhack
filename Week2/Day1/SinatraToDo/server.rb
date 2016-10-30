@@ -2,6 +2,9 @@ require 'sinatra'
 require 'sinatra/reloader'
 require_relative('lib/sinatratodo.rb')
 require_relative('lib/todolist.rb')
+require_relative("lib/game.rb")
+
+game = Game.new
 
 
 list = TodoList.new
