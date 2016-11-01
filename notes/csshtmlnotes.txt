@@ -1,0 +1,12 @@
+CSS and HTML notes (week 3, day 2)
+
+
+
+1. DOM(document Object Model)
+- graph that the browser constructs to represent the html
+- work on it through the chrome development tools
+
+
+
+
+The Chrome Development Tool

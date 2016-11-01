@@ -1,0 +1,24 @@
+ 
+	.box {
+					margin: 10px;
+	}
+	.blue {
+					border: 1px solid red;
+	}
+	.box.blue {
+					background: blue;
+	}
+	#red 	  {
+					background: red;
+	}
+	#top {
+					position: absolute;
+					left: 350px;
+					top: 350px;
+	}
+	#bottom {
+					position: absolute;
+					left: 500px;
+					top: 400px;
+	
+	

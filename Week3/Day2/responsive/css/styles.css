@@ -1,0 +1,83 @@
+html,
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+.pizza-header {
+	
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: pink;
+	height: 100%;
+	
+
+	/*specific to extra small version*/
+	background-image: url("https://pixabay.com/static/uploads/photo/2016/06/22/11/48/zebra-1472848_960_720.png");
+}
+
+@media screen and (min-width: 768px) {
+	.pizza-header {
+			background-image: url("https://pixabay.com/static/uploads/photo/2016/06/09/16/49/zebra-1446086_960_720.png");
+	}
+
+}
+
+@media screen and (min-width: 992px) {
+
+	.pizza-header {
+			background-image: url("https://pixabay.com/static/uploads/photo/2016/06/06/04/34/zebra-1438783_960_720.jpg");
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	
+	.pizza-header {
+			background-image: url("https://pixabay.com/static/uploads/photo/2016/09/17/12/49/zebra-1676075_960_720.jpg");
+	}
+}
+
+.pizza {
+
+		color: blue;
+		font-weight: bold;
+		font-size: 40px;
+			
+}
+
+@media screen and (min-width: 768px) {
+	.pizza {
+			color: purple;
+			font-weight: bold;
+			font-size: 80px; 
+
+	}
+
+}
+
+@media screen and (min-width: 992px) {
+
+	.pizza {
+				color: orange;
+				font-weight: bold;
+				font-size: 100px; 
+
+			
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	
+	.pizza {
+				color: grey;
+				font-weight: bold;
+				font-size: 200px;
+			
+	}
+}
+
+
+

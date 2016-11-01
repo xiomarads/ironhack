@@ -1,15 +1,17 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="movie.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script> 
+<!-- <link rel="stylesheet" type="text/css" href="movie.css"> -->
 <title>Movie Lovers</title>
 </head>
 
-<body>
-<h1>Movie Lovers</h1>
-<h3>Type a word</h3><br/>		
+<body class="container center-align">
+<h1 class= "card blue">Movie Lovers</h1>
+<h3 s>Type a word</h3><br/>		
 <form action="/search_results" Method="get">
-<input type="text" name="user_word" placeholder= "your_word">
-<button>Submit</button>
+<input type="text" name="user_word" placeholder= "type your word">
+<button class="waves-effect waves-light blue btn">Submit</button>
 </form>
 </body>
 </html>

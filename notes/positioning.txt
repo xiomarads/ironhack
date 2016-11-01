@@ -1,0 +1,13 @@
+positioning.txt
+
+
+1. position property
+- position: static;
+- position absolute (gets rid of the greedy block display)
+- position relative (uses from the original position to...)
+- position absolute (uses the whole screen as a reference to...)
+- position absolute takes away the original tag, unlike position relative keeps the tag in the original place. 
+- position absolute does not adapt very well to all screen sizes
+-floating is good for stacking things next to each other.  It doesn't move the other elements.
+- overflow auto, makes the floats not act weird around other tags.
+-clearfix technique (similar to overflow auto)

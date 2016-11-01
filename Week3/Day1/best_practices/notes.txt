@@ -1,0 +1,30 @@
+HTML 
+
+*Important jargon:
+
+1. tag: <a> </a>
+2. attributes: key value pairs, they have a name and a value
+3. tags and image tags have special attributes: for <a> href= , for <img> src=.
+4. head contains things that are not displayed on the browser and the title which shows on the tab form.
+5. body content is displayed on the browser.
+
+6. find tools for policing html
+7. try to use tags for their intended purpose
+8. html5 doctor = tool to figure out what each tag is for.
+9. Have everything lowercase in the html part, to be able to tell code part from content part.
+10. all values need to be quoted (whether single or double quotes).
+
+11. name classes and id based on their role in the application and not on its mere look.
+12. on <img src="jonshon.jpg" alt="Jon Snow"> => for screen readers, talks out the html of the page for people who can't see.  And for displaying a text is when the image does not load.  Try to do it very descriptive for people who cannot see and who will instead get a narration == make it accesible no matter what their particular situation is.
+13. Google penalizes on the search results when you don't use alt or accesility tools.
+14. Images which are not inherent part of the content, then use image background as part of css.
+15. First thing to do is make sure everything is wired correctly.  CSS to HTML link etc.
+
+
+16. Box model
+
+.box {
+	font-size: 40 px
+	font_color: blue
+	}
+17. display properties depend on the tag and its predetermined display attribute, divs have block displays. This can be manipulated and changed.  Look at display values.

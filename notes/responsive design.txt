@@ -1,0 +1,8 @@
+responsive design notes
+
+1. building a site that adapts to different sizes and remains usable.
+
+2. 2 principless: responsive and adaptive
+3. try to avoid too many fonts that they user has to download, it makes loading the website faster
+4. vector (svg) images vs. regular images (jpg, gif for example), can scale infinetely.
+5. if you know you'll be writing for mobile and desktop, start with phone design. (depends on the market you're building for)
