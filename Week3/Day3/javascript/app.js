@@ -1,5 +1,22 @@
+var countCountries = require("./lib/countcountries.js");
+//wiring happens based on the name of the file, not on the name of the variable.
+// ./lib/ lets node know that this is a local file
+
+
 // countries = ["Puerto Rico", "USA", "Nicaragua", "France", "Zimbabwe", "Mongolia", "Argentina", "Cuba", "Nigeria", "Haiti"]
-var countries = ["Puerto Rico", "USA", "Nicaragua", "France", "Zimbabwe", "Mongolia", "Argentina", "Cuba", "Nigeria", "Haiti"];
+var countries = [
+  "Puerto Rico", "Puerto Rico",
+  "USA", "USA", "USA", "USA", "USA",
+  "Nicaragua", "France", "Zimbabwe", "Mongolia", "Argentina",
+  "Cuba", "Cuba", "Cuba", "Cuba",
+  "Nigeria", "Haiti"
+];
+
+console.log(countCountriesFn("USA", countries) === 5 );
+console.log(countCountriesFn("Puerto Rico", countries) === 2 );
+console.log(countCountriesFn("Cuba", countries) === 4 );
+console.log(countCountriesFn("Nicaragua", countries) === 1 );
+console.log(countCountriesFn("Japan", countries) === 0 );
 // countries.each do |a_country|
 //countries.each do |a_country|
 //   puts " "

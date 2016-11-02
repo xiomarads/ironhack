@@ -7,4 +7,6 @@
  4. instead of blocks as in Ruby, we use functions on js
  5. Ruby uses snake_case
  6. Javascript uses camelCase
- 7 != ClassCase
+ 7. != ClassCase
+ 8. end in Javascript is the curly braces
+ 9. no implicit return in javascript, must type returns
