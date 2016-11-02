@@ -1,0 +1,10 @@
+ Javascript
+
+ 1. Makes the user experience, in a web application, better
+ (e.g. automatic liking on facebook without redirecting.)
+ 2. first time assigning a variable, must declare var
+ 3. when invoking a method in js, parentheses are required, not optional as in Ruby.
+ 4. instead of blocks as in Ruby, we use functions on js
+ 5. Ruby uses snake_case
+ 6. Javascript uses camelCase
+ 7 != ClassCase
