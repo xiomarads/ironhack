@@ -1,0 +1,6 @@
+
+
+Asynchrounously:
+the idea of slow computations being performed asynchronously (several slow tasks being performed in the background as other tasks are happening)
+
+Callbacks:
