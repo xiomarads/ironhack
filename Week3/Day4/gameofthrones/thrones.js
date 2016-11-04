@@ -1,5 +1,5 @@
 var fs = require('fs');
-function fileActions(err, file){ 
+function fileActions(err, file){
     if (err) {
         throw err;
     }
@@ -37,3 +37,15 @@ function searchFor(name,episode){
         console.log("-----------------------------------------------------------");
     }
 }
+
+// //if we had to sort titles instead of numbers then we'd have to use
+//if statements inside the same function (we couldn't just do math operations on
+//strings.):
+// // if (episodeA.title < episodeB.title) {
+// //return -1;
+// // else if (episodeB.title < episodeA.title) {
+// return 1;
+// else {
+//   return 0;
+// }
+// });
