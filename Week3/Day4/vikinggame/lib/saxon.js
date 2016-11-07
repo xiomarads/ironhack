@@ -1,7 +1,6 @@
 
 class Saxon {
-	constructor(name, health, strength){  //instead of initialize on Ruby
-		this.name = name;
+	constructor(health, strength){
 		this.health = health;
 		this.strength = strength;
 	}

@@ -1,4 +1,4 @@
-errequire "sinatra"
+require "sinatra"
 require_relative("lib/Calculator.rb")
 
 get "/add" do

@@ -1,0 +1,68 @@
+.jumbotron {
+	background: url(https://pbs.twimg.com/profile_banners/3003392363/1446585806/1500x500) 50% 50% no-repeat;
+	background-size: cover;
+	position: relative;
+	width: 100%;
+	height: 360px;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	margin: 0;
+
+}
+
+.xdprofile {
+	background: url(https://pbs.twimg.com/profile_images/723348973365301248/5aOEd_VJ_400x400.jpg) 50% 50% no-repeat;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 25px;
+	border: 5px solid white;
+}
+
+#follow {
+	float: right;
+	padding: 5px 15px 5px 15px;
+}
+
+#toprow {
+	line-height: 46px;
+}
+
+.row a {
+	padding: 10px;
+	padding-left: 40px;
+}
+
+.profile {
+	position: relative;
+	left: 90px;
+	bottom: 200px;
+}
+
+body {
+	background-color: #e0e0eb;
+}
+
+.row {
+	background-color: white;
+}
+
+.search-twitter {
+	float: right;
+	display: block;
+    box-sizing: border-box;
+    width: 221px;
+    height: 32px;
+    padding: 10px 27px 6px 12px;
+    font-size: 12px;
+    line-height: 1;
+    color: #292f33;
+    background-color: #f5f8fa;
+    border: 1px solid #e1e8ed;
+    border-radius: 21px;
+    transition: all .2s ease-in-out;
+    margin-top: 7px;
+}
