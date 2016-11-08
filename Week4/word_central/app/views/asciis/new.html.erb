@@ -1,0 +1,13 @@
+<h1> Ascii Conversion </h1>
+
+<a href= '/'> Home </a>
+
+<form action="/asciis" method="post">
+  <div>
+    <label for="asciis_conversion_user_text">Text</label>
+    <textarea name="asciis[user_text]" id="asciis_conversion_user_text"></textarea>
+  </div>
+  <input type="hidden" name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+  <button type="submit">Submit text</button>
+</form>

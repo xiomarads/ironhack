@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TrimeTacking</title>
+    <title>Wordcentral</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,15 +9,6 @@
   </head>
 
   <body>
-    <header>
-      <h1 style="text-align: center;">Welcome to the TrimeTacker</h1>
-
-      <%= render "snippets/navigation" %>
-    </header>
     <%= yield %>
-
-    <footer>
-      <p> Made with <span style= "color: red;"> &hearts; </span> at Ironhack. </p>
-    </footer>
   </body>
 </html>

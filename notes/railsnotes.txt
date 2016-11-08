@@ -8,3 +8,58 @@ Ruby on Rails notes (7.11.16)
 - gem rails install
 - rails new timetracking (creates a new project inside a designated folder)
 - rails - - help
+- routes: which pages you can visit in the app, starting from the homepage.  
+- How to create those routes on Rails?
+- when creating a new page in rails follow these steps"	
+	1. Add "route"
+	2. Create the "controller" (if necessary)   .... - command to create controller site:   rails generate controller site
+	3. Add "action/method" (methods are called actions in rails)
+	4. Create "view" (erb files)
+
+- command to create controller site:   rails generate controller site
+- command: rails server
+- opposite of generate, destroy #command
+- partial snippets have to begin with a _navigation
+
+
+DAY 2 (Rails) (8.11.16)
+
+Databases
+
+- How can we save data in a web application? you need to write data to permanent storage--i.e. hard disk.
+- Relational Databases/Relational Database Management System
+- How do users, posts, tags interact with each other, saving that relationship.
+- databases: tables. Each table saves 1 kind of data (1 for users, 1 for posts, 1 for tags, 1 for comments)
+- Anything in Ruby that would be a class, would be a table on a database.
+- Every row in the table, is one of those kinds of things. In the user table, every row is one individual user.
+- Every column is individual piece of information for each user.
+- Every row in a table will have an id (not always called id, conceptually it's called primary key) column, which makes the row unique. (on a per table basis).
+- schema = structure of the databse. which tables do i have? and what columns do i have?  (not about the rows/content).
+- without describing the structure, database won't know what you're talking about.
+- how to relate different tables? who was the "author" of this "post"?  the association happens through the IDs.
+- you have to describe the relationship between tables.
+- relationships: one to many (or many to many, many to one). The many table must have the id of the one table.
+- to represent a many to many relationship you need an extra table
+		-Tables
+		-Row
+		-Column
+		-Primary Key
+		-Schema
+- an added step when user tries to retrieve information. The app.rb will now know that it has access the database to retrieve specific information as part of the "business logic" in our models.
+- CRUD data from a data source
+- Ensure data format is valid
+- Implement validations
+- Single responsibility principle: an object should have on a single responsibility.
+- Our goal for the day:  a list with the latest projects
+- rails g model Project_name: string
+- migration file represents a change to your schema, it's what tells what the structure will be.
+- an Active Record ("ORM" object relational map) maps ruby objects to the database.  Classes are mapped to rows. Objects are mapped to rows.
+- you can change the name of a table if you want, but by default Rails will use the plural of the class name.  It makes that assumption.
+- command to get up date with migration: rails db:migrate
+- schema.rb file represents the current of the structure in your database
+- rails generate migration add_description_to_projects description:text   (adding columns) (add blah to projects) (description:text is the type of content) 
+- check migrations on db migration files in the project
+- if you make an empty migration use the destroy command
+- 
+
+
