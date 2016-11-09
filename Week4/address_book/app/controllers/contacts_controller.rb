@@ -4,6 +4,7 @@ class ContactsController < ApplicationController
       render :index
   end
   def add
-    @newcontact = 
-
+    @newcontact = Contact.new
+    render 'new'
+  end
 end

@@ -13,6 +13,10 @@ Rails.application.routes.draw do
 
   get '/projects', to: 'projects#index'
 
-  get '/projects/:id', to: 'projects#show', as: 'project'
+  get '/project/new', to: 'projects#new'
 
+  post '/projects', to: 'projects#create'
+
+  get '/projects/:id', to: 'projects#show', as: 'project'
+# the route with more specific values /:id needs to go as low as possible.
 end

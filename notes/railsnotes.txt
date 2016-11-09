@@ -154,6 +154,9 @@ as: "project" or as: :project
 
 then input project_path(variable) into the show.html.erb (this will replace hardcoding the id of each project)
 
+Form types:
+
+form_for ======> helpful when creating a new row or editing a new row on databases
 
 
 

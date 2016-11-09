@@ -1,5 +1,5 @@
 <h1> Projects </h1>
-<ul>
+<ul style="list-style: none;">
   <% @projects.each do |project| %>
     <!-- <li> <%= project.name %></li> -->
     <li>
@@ -10,3 +10,5 @@
 </li>
 <% end %>
 </ul>
+
+<%= link_to "Create a new project", project_new_path %>
