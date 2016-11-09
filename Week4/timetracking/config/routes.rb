@@ -11,4 +11,8 @@ Rails.application.routes.draw do
 
   post '/calculate', to: 'calculator#process_addition'    #from the form
 
+  get '/projects', to: 'projects#index'
+
+  get '/projects/:id', to: 'projects#show', as: 'project'
+
 end

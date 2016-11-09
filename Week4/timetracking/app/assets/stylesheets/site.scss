@@ -5,7 +5,9 @@
 header {
   text-align: center;
   background-color: white;
+  display: block;
 }
+
 body {
   text-align: center;
   background-color: white;
@@ -23,6 +25,7 @@ footer {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  font-size: 30px;
   background-color: lightgrey;
+  font-size: 30px;
+
 }

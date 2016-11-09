@@ -4,9 +4,9 @@ class AsciisController < ApplicationController
   end
 
   def create
-      @text = params[:asciis_conversion][:user_text]
       a = Artii::Base.new :font => 'slant'
-      a.asciify(@text)
-      render "ascii conversion"
+      @text = params[:asciis_conversion][:user_text]
+      @ascitext= a.asciify(@text)
+      render "ascii_conversion"
   end
 end

@@ -34,7 +34,8 @@ Databases
 - Every row in the table, is one of those kinds of things. In the user table, every row is one individual user.
 - Every column is individual piece of information for each user.
 - Every row in a table will have an id (not always called id, conceptually it's called primary key) column, which makes the row unique. (on a per table basis).
-- schema = structure of the databse. which tables do i have? and what columns do i have?  (not about the rows/content).
+- schema = structure of the databa
+se. which tables do i have? and what columns do i have?  (not about the rows/content).
 - without describing the structure, database won't know what you're talking about.
 - how to relate different tables? who was the "author" of this "post"?  the association happens through the IDs.
 - you have to describe the relationship between tables.
@@ -46,7 +47,7 @@ Databases
 		-Primary Key
 		-Schema
 - an added step when user tries to retrieve information. The app.rb will now know that it has access the database to retrieve specific information as part of the "business logic" in our models.
-- CRUD data from a data source
+- CRUD (create read update delete rows)  data from a data source
 - Ensure data format is valid
 - Implement validations
 - Single responsibility principle: an object should have on a single responsibility.
@@ -60,6 +61,100 @@ Databases
 - rails generate migration add_description_to_projects description:text   (adding columns) (add blah to projects) (description:text is the type of content) 
 - check migrations on db migration files in the project
 - if you make an empty migration use the destroy command
-- 
+- easiest way to add rows is on rails console  command: rails console
+- for simple queries on command line: my_project = Project.new, 
+my_project.name = "Ironhack", my_project.description = "Description", my_project.save
+- my_project variable is throwaway just to save to the database from the console, it's interchangable.
+- to retrieve all projects:  projects = Project.all ("projects" variable is throwaway, "Projects" is refering to the model.)
+- projects.length
+- can do all methods from ruby (rails console is like PRY but with the rails framework and files available)
+-Retrieving by attribute: Project.find_by(id: 1)
+Project.find_by(name: "Ironhack") this is an exact match (id or name for example)
+- Another option: Project.find(7)
+
+- #where as a string with placeholders
+Project.where("name=?", 'Ironhack')
+
+-#where (negation)
+Project.where.not("id < ?", 4)
+
+- Retrieve with order (#order)
+Project.order("created_at DESC")
+Project.order("name ASC")
+
+- Active support dates
+d = Date.current
+# => mon, 14 mar, 2016
+d + 1.year
+# => tue, 14 mar, 2017
+d - 3.hours
+# => mon, 14 Mar 2016 03:00
+
+More queries
+
+- Project.where.not(name: "Ironhack")
+- date = Time.now.midnight - 1.month (between the last month and now)
+
+Range queries
+
+- from = Time.now.midnight - 1.day
+- to = Time.now.midnight
+- Project.where(updated_at: from..to)
+
+- rails db:seed to add project from seeds.rb
+- rails db:drop (deletes database (both structures and rows)
+- rails db: create (to recreate it)
+- rails db: migrate (because it's a new database)
+- if you want to seeds again
+
+
+- when looking at a rails app, the first to see is the routes, because it will tell you what other pages there are.
+
+Word Central Solution (November 9th)
+
+- For counting stuff in a loop, the best is to use a hash.
+
+Rails continuation
+
+Faith of the 7 CRUD actions
+
+There's 7 actions (specific routes and actions, pages)  IDs are very important for these pages.
+
+1. index - displays lists (of projects, contacts, etc)
+-----
+2. new - shows the forms (the page that shows the form for creating something new for the database.)
+3. create - receives the forms submission and goes on to create the thing that goes in the database.  Adds a row to our database.
+-----> will never have a 'new' without the 'create'
+-----
+
+4. show - displays the details of a single thing, product, person, etc.
+
+-----
+5. edit - form for editing an existing thing.  whenever you make a mistake filling in the information.
+6. update - process the forms
+-----
+
+7. destroy - deletes.
+
+In order to create a new show page: on timetracker
+
+1. create a  get '/projects/:id', to: 'projects#show' on routes.rb
+2. then, add action to the projects controller 
+
+def show
+    @myproject = Project.find(params[:id])
+    render :show
+    end
+
+ 3. next, view
+
+command for checking if a route has a prefix: rails routes
+if it doesn't have one, add a name on routes.rb 
+as: "project" or as: :project
+
+then input project_path(variable) into the show.html.erb (this will replace hardcoding the id of each project)
+
+
+
 
 
