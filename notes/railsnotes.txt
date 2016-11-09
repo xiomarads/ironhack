@@ -204,4 +204,10 @@ To facilitate retrieval of time entries:
 
 - After time entries to projects on seeds.rb, make sure to drop, create, migrate, seed
 
-- what are time_entries? It's almost like an array
+- what are time_entries? It's almost like an array, ActiveRecord
+
+- when you name the controller the same as a model, the controller is plural.
+
+- to link to routes on view, must name the route 
+
+- name of params is also the name of the action on the routes.

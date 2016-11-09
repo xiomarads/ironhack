@@ -5,8 +5,9 @@
     <li>
       <%= link_to project.name, project_path(project) %>
      <% if project.description != nil && project.description != "" %>
-        <%= project.description %>
+        <%= project.description %> 
   <% end %>
+    <%= link_to("See time entries", project_time_entries_path(project)) %>
 </li>
 <% end %>
 </ul>
