@@ -1,4 +1,4 @@
-<ul>
+<ul style="list-style: none;">
 <li> <a href= "/"> Home </a> </li>
 <li> <a href= "/contact"> Contact </a> </li>
 <li> <a href= "/calculator"> Calculator </a> </li>

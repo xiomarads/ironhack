@@ -158,6 +158,50 @@ Form types:
 
 form_for ======> helpful when creating a new row or editing a new row on databases
 
+TIME ENTRY TABLE
+
+The table needs:
+-project ID
+-hours
+-minutes
+-comment
+-date
+
+Project
+-name
+-description
+
+when there is association between tables, we have to wire the classes
+
+-to enter a particular time entry to a particular project, you must look for the ID first:
+
+On the terminal...
+
+ => #<Project id: 10, name: "Amazonia", created_at: "2016-11-09 16:13:03", updated_at: "2016-11-09 16:13:03", description: "Design">
+2.3.1 :002 > time_entry = TimeEntry.new(hours: 2, minutes: 30, Date.yesterday, comments: "did stuff", project_id: 10)
+
+then save,
+
+new_entry.save
+
+then to check list of entries,
+
+list_of_entries = TimeEntry.where(project_id: 10)
+
+To facilitate retrieval of time entries:
+
+2.3.1 :009 > proj10 = Project.find(10)
+  Project Load (0.2ms)  SELECT  "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT ?  [["id", 10], ["LIMIT", 1]]
+ => #<Project id: 10, name: "Amazonia", created_at: "2016-11-09 16:13:03", updated_at: "2016-11-09 16:13:03", description: "Design">
 
 
+ same result with,
 
+2.3.1 :010 > proj10.time_entries
+  TimeEntry Load (0.2ms)  SELECT "time_entries".* FROM "time_entries" WHERE "time_entries"."project_id" = ?  [["project_id", 10]]
+ => #<ActiveRecord::Associations::CollectionProxy [#<TimeEntry id: 1, project_id: 10, hours: 5, minutes: 25, comments: "worked on stuff", date: "2016-11-08 00:00:00", created_at: "2016-11-09 17:09:34", updated_at: "2016-11-09 17:09:34">]>
+2.3.1 :011 >
+
+- After time entries to projects on seeds.rb, make sure to drop, create, migrate, seed
+
+- what are time_entries? It's almost like an array
