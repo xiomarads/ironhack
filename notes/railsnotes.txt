@@ -219,3 +219,42 @@ REVIEWS:
 on routes:
 
 instead of home '/' you can do root "landing_pages#casa"
+
+
+
+RAILS (Day 4th-November 10th)  "Nested Routes & more"
+
+On timetracker:
+
+Creating an empty variable to create new time entry:
+def new
+    @myproject = Project.find(params[:project_id])
+    @my_entry = @myproject.time_entries.new 
+
+    #@myproject already exists
+    #blank entry to add it to the existing project.
+  end
+end
+
+
+When building the form for the view, for the new time entry that the user will input, remember the different types of inputs on each label.
+
+Setting up validations under models in order to redirect user in case they didn't fill up the form correctly
+
+Rails generates error messages automatically....we just have to display on the form by looping over them:
+:
+<% if @my_entry.errors.any? %>
+  <ul>
+    <% @my_entry.errors.full_messages.each do |error_msg| %>
+    <li><%= error_msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+
+
+
+
+
+

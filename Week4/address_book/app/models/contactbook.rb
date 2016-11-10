@@ -1,2 +1,0 @@
-class Contactbook < ApplicationRecord
-end
