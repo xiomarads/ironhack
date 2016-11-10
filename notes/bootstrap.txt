@@ -1,0 +1,12 @@
+Bootstrap
+
+1. download bootstrap
+2. or use link with the css file that you include on your project, files must link
+3. on the terminal curl{https://link url} > css/bootstrap.css (create a file first)
+4. power of the selector matters when trying to override properties on bootstrap
+5. do not put text within glyph icon text span, instead use it inside of <p> tag and put the span glyph icon where you need it.
+6. container, container fluid can be inside of another or one after another
+7. to identify rows:  rows are not "interrupted" by other content
+8. for the grid, make a plan prior to starting the project
+9. rows go inside of containers
+10. to be able to see them add some css..such as border, color, whatever, otherwise won't be able to see them

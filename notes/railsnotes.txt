@@ -211,3 +211,11 @@ To facilitate retrieval of time entries:
 - to link to routes on view, must name the route 
 
 - name of params is also the name of the action on the routes.
+
+
+REVIEWS:
+
+1. always start by generating route, controller, action, view for the home/landing page.
+on routes:
+
+instead of home '/' you can do root "landing_pages#casa"

@@ -1,10 +1,12 @@
 class ContactsController < ApplicationController
   def index
-    @contacts = Contact.order(created_at: :desc).limit(10)
+      @contacts = Contact
+      # Contact comes from the name of the model
       render :index
   end
-  def add
+
+  def new
     @newcontact = Contact.new
-    render 'new'
+    render :new
   end
 end

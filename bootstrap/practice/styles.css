@@ -1,0 +1,11 @@
+.row {
+	border: 1px dotted grey;
+}
+
+.col-xs-8 {
+	border: 1px dotted pink;
+}
+
+.col-xs-4 {
+	border: 1px dashed green;
+}
