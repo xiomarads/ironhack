@@ -12,11 +12,7 @@ class TimeEntriesController < ApplicationController
 
   def create
     @myproject = Project.find params[:project_id]
-    @my_entry = @myproject.time_entries.new(
-    hours: params[:time_entry][:hours],
-    minutes: params[:time_entry][:minutes],
-    date: params[:time_entry][:date],
-    comments: params[:time_entry][:comments])
+    @my_entry = @myproject.time_entries.new(entry_params)
 
     if @my_entry.save
       redirect_to project_time_entries_path(@myproject)
@@ -25,4 +21,34 @@ class TimeEntriesController < ApplicationController
     end
   end
 
+  def edit
+    @myproject = Project.find params[:project_id]
+    @my_entry = @myproject.time_entries.find params[:id]
+    render :edit
+  end
+
+  def update
+    @myproject = Project.find_by(id: params[:project_id])
+    @my_entry = @myproject.time_entries.find_by(id: params[:id])
+
+    if @my_entry.update(entry_params)
+      # COMES FROM THE PRIVATE METHOD BELOW, NOT RAILS MAGIC!
+redirect_to '/projects/#{@myproject.id}/time_entries'
+  else
+      render :edit
+    end
+  end
+
+  def destroy
+    myproject = Project.find_by(id: params[:project_id])
+    my_entry = myproject.time_entries.find(params[:id])
+    my_entry.destroy
+  redirect_to project_time_entries_path(myproject)
+    end
+
+  private
+
+  def entry_params
+    params.require(:time_entry).permit(:hours, :minutes, :date, :comments)
+  end
 end

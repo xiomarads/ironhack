@@ -251,7 +251,40 @@ Rails generates error messages automatically....we just have to display on the f
   </ul>
 <% end %>
 
+- form for will alway display messages to save only correctly filled forms.
 
+-feedback to the user. essential.
+
+-UPDATING (in order to update the actual database)
+....
+on rails console
+my_project = Project.find(1)  -----> retrieve from the database before
+my_project.name = "Ironhack updated"
+ => "Ironhack updated"
+2.3.1 :003 > my_project.save
+
+methods: deleting (destroy), updating
+
+can destroy only 1 single object, not an array of objects
+
+destroy_all, destroys all of an array
+
+#patch is to give the rigth path name
+
+for editing you use get and patch
+for creating you use get and post
+
+used strong parameters to refactor update and edit actions in time_entries_controller
+
+command: rails server
+
+- resource routing is a way to define all of the routes that we've just created in a much easier to read and short syntax.
+
+
+resources :projects do
+ resources :time_entries
+(nested routes)
+this block replaces the routes for new, create, edit, updates and all 7 CRUDS (only creates routes)
 
 
 

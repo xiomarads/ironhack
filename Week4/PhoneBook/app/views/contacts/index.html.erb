@@ -1,0 +1,12 @@
+<h1> Address Book </h1>
+<h4> - Simplify - </h4>
+<h4> List of contacts </h4>
+<%= link_to "Add a new contact", contacts_new_path %>
+<ul style="list-style: none;">
+  <% @contacts.each do |a_contact| %>
+    <li> Name: <%= link_to "#{a_contact.name}", contact_path(a_contact) %> </li>
+    <li> Mobile: <%= a_contact.phone %> </li>
+    <li> Email: <%= a_contact.email %> </li>
+    <li> Address: <%= a_contact.address %> </li> <br/>
+  <% end %>
+</ul>

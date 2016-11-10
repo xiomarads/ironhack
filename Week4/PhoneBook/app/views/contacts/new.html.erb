@@ -1,0 +1,29 @@
+<h1> Address Book </h1>
+<h4> - Simplify - </h4>
+<%= link_to "Contact's List", contacts_path %>
+
+<h4> Add a new contact: </h4>
+
+<%= form_for @the_contact do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :phone %>
+    <%= f.number_field :phone %>
+  </div>
+
+  <div>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <%= f.button %>
+<% end %>

@@ -5,11 +5,11 @@
     <li>
       <%= link_to project.name, project_path(project) %>
      <% if project.description != nil && project.description != "" %>
-        <%= project.description %> 
+        <%= project.description %>
   <% end %>
     <%= link_to("See time entries", project_time_entries_path(project)) %>
 </li>
 <% end %>
 </ul>
 
-<%= link_to "Create a new project", project_new_path %>
+<%= link_to "Create a new project", new_project_path %>
