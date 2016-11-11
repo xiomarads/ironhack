@@ -1,0 +1,24 @@
+<h1> Concertful </h1>
+<h5> Your guide to Nicaragua's Best Concerts </h5>
+
+<h2> Today's Concerts </h2>
+
+<ul id="concerts-today">
+  <% @concertstoday.each do |a_concert| %>
+    <li>
+      <span class="artist">Artist: <%= link_to a_concert.artist, concert_path(a_concert.id) %></span>
+      <span class="location">City: <%= a_concert.city %></span>
+    </li>
+  <% end %>
+</ul>
+
+<h2> This Month's Concerts </h2>
+
+<ul id="concerts-today">
+  <% @concertsthismonth.each do |month_concert| %>
+    <li>
+      <span class="artist">Artist: <%= link_to month_concert.artist, concert_path(month_concert.id) %></span>
+      <span class="location">City: <%= month_concert.city %></span>
+    </li>
+  <% end %>
+</ul>

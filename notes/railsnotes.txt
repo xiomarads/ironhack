@@ -287,6 +287,17 @@ resources :projects do
 this block replaces the routes for new, create, edit, updates and all 7 CRUDS (only creates routes)
 
 
+Friday Project 
+ROCK WITH RAILS
+
+Iteration 2:
+2 lists of concerts: one for the day, one for the month
+remember: date ranges (for the month would start today-end of month, for week, starting right now)
+
+ Get at least to iteration 3
+
+
+
 
 
 

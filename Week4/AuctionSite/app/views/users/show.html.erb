@@ -1,0 +1,15 @@
+<header>
+<h1> Eby <h1>
+<h4> - Simplify - </h4>
+<h2> Top brands. Free shipping. More deals. </h2>
+<h3> Start the season with big savings </h3>
+</header>
+
+<h2> Users </h2>
+<%= link_to '/', home_path %>
+<ul style="list-style: none;">
+  <% @user.each do |a_user| %>
+    <li> Name: <%= a_user.name %> </li>
+    <li> Mobile: <%= a_user.email%> </li>
+  <% end %>
+</ul>

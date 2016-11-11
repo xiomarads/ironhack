@@ -1,0 +1,11 @@
+
+<h1> Concertful </h1>
+<%= link_to "All concerts", concerts_path %>
+<ul>
+<li> Artist: <%= @concert.artist %> </li>
+<li> Venue: <%= @concert.venue %> </li>
+<li> City: <%= @concert.city %> </li>
+<li> Date: <%= @concert.date %> </li>
+<li> Price: USD<%= @concert.price %> </li>
+<li> Description: <%= @concert.description %> </li>
+</ul>
