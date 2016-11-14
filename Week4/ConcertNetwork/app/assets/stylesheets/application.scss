@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
+@import "materialize";
+
+nav {
+  background-color: #4abd58 !important;
+}
+
+body {
+  background-color: rgba(158, 158, 158, 0.18);
+}
+
+#daily {
+      font-size: 28px;
+      margin: 9.46rem 0 1.168rem 0;
+}
+
+#monthly {
+      font-size: 20px;
+      margin: 9.46rem 0 1.168rem 0;
+}
+
+footer {
+  background-color: #4abd58 !important;
+}
+
+footer.page-footer {
+    margin-top: 400px;
+    padding-top: 8px;
+  }
+
+#edetails {
+    font-size: 28px;
+}
+
+#details {
+    font-size: 15px;
+}
+
+#lcomment {
+  font-size: 28px;
+}
+
+#ccomment {
+  font-size: 28px;
+}

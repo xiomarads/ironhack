@@ -1,7 +1,8 @@
-<h1> Concertful </h1>
-<h5> Your guide to Nicaragua's Best Concerts </h5>
 
-<h2> Today's Concerts </h2>
+
+<div class="row">
+  <div class="col s9">
+<h3 id="daily"> Today's Concerts </h3>
 
 <ul id="concerts-today">
   <% @concertstoday.each do |a_concert| %>
@@ -11,8 +12,9 @@
     </li>
   <% end %>
 </ul>
-
-<h2> This Month's Concerts </h2>
+</div>
+<div class="col s3">
+<h3 id="monthly"> This Month's Concerts </h3>
 
 <ul id="concerts-today">
   <% @concertsthismonth.each do |month_concert| %>
@@ -22,3 +24,5 @@
     </li>
   <% end %>
 </ul>
+</div>
+</div>

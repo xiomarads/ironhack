@@ -1,7 +1,5 @@
-
-<h1> Concertful </h1>
-<%= link_to "All concerts", concerts_path %>
-<ul>
+<h1 id="edetails"> Event Details <h1>
+<ul id="details">
 <li> Artist: <%= @concert.artist %> </li>
 <li> Venue: <%= @concert.venue %> </li>
 <li> City: <%= @concert.city %> </li>
@@ -9,3 +7,29 @@
 <li> Price: USD<%= @concert.price %> </li>
 <li> Description: <%= @concert.description %> </li>
 </ul>
+
+<h3 id="lcomment">Leave a comment</h3>
+
+<%= form_for [@concert, @mycomment] do |f| %>
+    <div>
+	        <%= f.label :author %>
+			    <%= f.text_field :author %>
+		</div>
+
+	  <div>
+		     <%= f.label :comment %>
+		     <%= f.text_area :comment %>
+		</div>
+
+	<%= f.button %>
+<%end%>
+
+
+	<h3 id="ccomment">Community Comments:</h3>
+  <ul style="list-style: none;">
+    <% @concert.comments.each do |a_comment| %>
+      <li>Author: <%= a_comment.author %> </li>
+      <li>Comment: <%= a_comment.comment %> </li> <br/>
+    <% end %>
+  </ul>
+<%= link_to "Back to concert listing", concerts_path %>

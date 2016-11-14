@@ -269,7 +269,7 @@ can destroy only 1 single object, not an array of objects
 
 destroy_all, destroys all of an array
 
-#patch is to give the rigth path name
+#patch is to give the riggt path name
 
 for editing you use get and patch
 for creating you use get and post
