@@ -1,2 +1,0 @@
-# ironhack
-coursework
