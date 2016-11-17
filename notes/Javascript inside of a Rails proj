@@ -1,0 +1,13 @@
+How to work with Javascript inside of a Rails project
+
+How to organize our code in Javascript inside of Rails (Rails has no opinions on how to organize JS inside of Rails...)
+
+Deciding when maybe there will be a need to use Ajax/Jquery/Javascript to make the user experience better (not having to refresh every time).
+
+How to split our code into logical smaller modules (in JS)?
+
+Components, keeping responsibilities separate.
+Components are widgets in our app.
+
+
+
