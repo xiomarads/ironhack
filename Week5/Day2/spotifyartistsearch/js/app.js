@@ -56,18 +56,31 @@ function handleError(errorrr) {
 
 // _________________________________________________________
 
-function searchAlbum () {
-  var artistid = $(this).data("id")
+function searchAlbum (aSearch) {
+  aSearch.preventDefault();
+  var artistId = $(this).data("id")
   console.log($(this).data("id"));
 	// /v1/artists/{id}/albums
 
   $.ajax({
     type: "GET",
-    url: `https://api.spotify.com//v1/artists/${artistid}/albums`,
+    url: `https://api.spotify.com//v1/artists/${artistId}/albums`,
     success: showAlbumInfo,
     error: handleError,
   });
 
 }
-
 // _________________________________________________________
+
+
+function showAlbumInfo(response) {
+	albumArray = response.items;
+	var albumHTML = '';
+	albumArray.forEach(function(album) {
+		albumHTML += `<li><h2>${album.name}</h2>`;
+		albumHTML += `<button class="js-tracks-search" data-album-id=${album.id}>See album's tracks</button>`;
+	});
+	$('.js-album-list').html(albumHTML);
+	$(".js-album-modal").modal("show");
+	$(".js-tracks-search").on("click",tracksSearch)
+};

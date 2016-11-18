@@ -13,5 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= app_setup
 //= require_tree .
 
+//we include this on top of require_tree because we want to execute it in order.  We include specific file when we want to control the order in which files are executed.

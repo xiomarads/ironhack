@@ -9,5 +9,13 @@ How to split our code into logical smaller modules (in JS)?
 Components, keeping responsibilities separate.
 Components are widgets in our app.
 
+javascrip in Rails lives in app, assets, javasrcript
 
+in rails, within the layouts folder in the application html.erb notice the javascript include tag, a method that includes the script tags on main index html, which means we don't have to include it manually.  It does the same for the CSS files.
+
+all javascript is included and bundled up because of the  //= require jquery, //= require twitter/bootstrap, etc
+
+//= require_tree . (includes everything on the JS folder)
+
+when defining functions, etc needs to be protected by attaching it to the only global variable
 
