@@ -1,6 +1,7 @@
 $(document).ready(function (){
 $(".js-searchtrack-form").on("submit", searchTrack);
 $('.btn-play').on('click', playSong);
+
 });
 
 // console.log("am I here?")
@@ -55,5 +56,13 @@ $('.btn-play').on('click', playSong);
     else {
       $('.js-audio').trigger('play');
       $('.btn-play').addClass('playing')
-      	}
+    };
+    $('.js-audio').on('timeupdate', printTime);
+  }
+
+  // Define a function to print the player's current time
+  function printTime () {
+  var current = $('.js-audio').prop('currentTime');
+  console.debug('Current time: ' + current);
+  $('.js-current-time').prop('value', current);
   }
