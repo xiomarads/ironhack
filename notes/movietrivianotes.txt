@@ -1,0 +1,17 @@
+APIs Notes
+Postman
+
+To make a post on Postman
+
+Post
+Check URL
+Params
+Body
+
+Creating your own API
+
+if you want  a feature that doesn't require a page refresh
+need AJAX
+Mainly small features that improve the user experience.
+AJAX requests are made to other APIs or your own API
+
