@@ -1,0 +1,46 @@
+
+User Authentication Notes
+
+- A user is telling you who they are, they are identifying themselves.
+- When a user is in the log-in screen.
+- Different types of users, visitors, logged in, log in users are able to do different things.
+- Basic wiring: 1. registration (need an account, create a user in our system) 2. User Authentication (log in and log out). From anonymous user to non-anonymous user, back and user.
+- This is all through the sessions, which works via the cookies.
+- With something that identifies the user uniquely (phone number, email, licence plate + password for security (does not have to be unique)).
+- Once you register you can log in and log out.
+- Saving logged in and logged out status is through the session. This is how the system rembers that you're either logged in or logged out.
+- 3 types of users: non-logged in users, regular logged in users, administrator users.  Non logged users can only see home page, regular logged in users can see the user page, admin user can see a list of all the users who are logged in, etc.  We set this up with rules.
+- passwords and all sensitive information should be encrypted (scramble it!) in the back end, not saved as a string! we need to protect our users' passwords, we can encrypt them by using a gem call bcrypt (Ruby version.
+- a properly built app should not be able to retrieve your password.  With an algorythm that takes the string into a bullshit string, the scramble is what you save in the database.
+- every app encrypts different
+- we have to add a column (password_digest) to our database and a method to the user class
+rails generate migration AddPasswordDigestToUsers password_digest:string
+
+This should be the result on Rails:
+class AddPasswordDigestToUsers < ActiveRecord::Migration
+  def change
+    add_column :users, :password_digest, :string
+  end
+end
+
+- Include in the class User < ActiveRecord::Base
+  has_secure_password 
+
+-Reminder: on user's controller remember to add the password and password confirmation to the list of params
+
+  def user_params
+     params.require(:user).permit(:username, :email, :password, :password_confirmation)
+  end
+
+- once you have a password, etc. we can do log in's. If the credentials you give me match the registration inforamtion.
+
+- 1. you give me correct credentials and I save the session for the first time.
+2. check in the session, personalizing the page. If you are logged in show these links, else, show these links.  Personalizing the page, begins with saving the session.
+
+-set pages with log in
+-set pages with log out
+
+-if credentials are not correct, i don't save the session
+-for all these processes we put a sessions controler
+-personalizing web sites depending on logged in or not logged in is about showing specific user information ...besides these links or those links.
+-it is using specific user info to personalize their page.
