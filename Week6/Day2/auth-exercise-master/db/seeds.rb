@@ -10,3 +10,10 @@ User.create(username: 'Ignacio', email: 'hola@ignaciovaldes.me')
 User.create(username: 'Alexandra', email: 'alechen04@gmail.com')
 User.create(username: 'Aram', email: 'aram@berkeley.edu')
 User.create(username: 'Maria', email: 'unamaria@gmail.com')
+#
+# User.create!(
+# username: "Nick Borbe",
+# email: "nick@ironhack.com",
+# password: "whatever",
+# password_confirmation: "whatever",
+# role: "admin")

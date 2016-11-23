@@ -11,13 +11,13 @@ class SessionsController < ApplicationController
   def create
     user_maybe = User.find_by(email: params[:email])   #find method is only for id's
 
-    if user_maybe == nil ||
-      user_maybe.authenticate(params[:password]) == false
-      redirect_to "/login"
-    else
+    if user_maybe && user_maybe.authenticate(params[:password])
       session[:user_id] = user_maybe.id
-      # session is a hash, so we need to give it a key, in this case the user ID. Session is Rails magic.
+      flash[:login_success] = "You have logged in successfully."
       redirect_to "/"
+    else
+      redirect_to "/login"
+      # session is a hash, so we need to give it a key, in this case the user ID. Session is Rails magic.
   end
 end
 

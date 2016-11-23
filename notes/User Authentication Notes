@@ -44,3 +44,21 @@ end
 -for all these processes we put a sessions controler
 -personalizing web sites depending on logged in or not logged in is about showing specific user information ...besides these links or those links.
 -it is using specific user info to personalize their page.
+
+
+week 6, day 3: Authorization
+
+Authorization 
+1. determines if the person has the permissions to do what they're trying to do.
+2. admin pages, personal profile pages
+3. who can edit, add, access, etc
+4. giving special status to users requires creating extra columns in the database table.
+5. important to give user feedback when we are doing the extra redirects, what happend...etc
+6. flash messages last only for 1 session
+
+create user roles, besides logged in and unlogged in users.
+add columns to table, add a column called role  ...on the terminal:  
+rails g migration add_role_to_users role:strings
+
+First user with user role needs to be created in the console...
+

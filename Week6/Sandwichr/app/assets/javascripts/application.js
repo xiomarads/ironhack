@@ -17,7 +17,7 @@
 
 
 $(document).on("ready", function() {
-		$(".js-ingredient").on('click', AddIngredient);
+$(".js-ingredient").on('click', AddIngredient);
 
 });
 
@@ -25,6 +25,7 @@ $(document).on("ready", function() {
 function AddIngredient () {
 		var ingredientId = $(this).data("ingredient-id");
 		var sandwichId = $(this).data("sandwich-id");
-		
-}
 
+
+
+}

@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create' #log in
   delete '/logout' => 'sessions#destroy' #log out
 
+  get "/secret_gif", to: "secrets#show"
 end
