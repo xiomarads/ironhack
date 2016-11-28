@@ -1,0 +1,4 @@
+1. when doing API on rails, use render json instead of redirect, AJAX won't understand redirect.
+2. when doing APIs remove the exception from protect_from_forgery in Controllers
+3. check Jquery methods (.trigger("reset")
+4. check events delegation on jquery (button class within a button class)...

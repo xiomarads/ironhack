@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
     end
 
     def check_if_admin
-      if @current_user == nil
+      check_if_logged_in
         get_current_user
       end
 

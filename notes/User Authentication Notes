@@ -62,3 +62,4 @@ rails g migration add_role_to_users role:strings
 
 First user with user role needs to be created in the console...
 
+
